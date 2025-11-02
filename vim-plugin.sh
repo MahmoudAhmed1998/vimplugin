@@ -5,14 +5,18 @@
 RED="\033[0;31m"
 GREEN="\033[0;32m"
 YELLOW="\033[1;33m"
+MAGENTA="\033[0;35m"
 BLUE="\033[0;34m"
 CYAN="\033[0;36m"
 BOLD="\033[1m"
 RESET="\033[0m"   # Reset to default col
 
+print_line() {
+    printf "${MAGENTA}%s${RESET}\n" "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+}
 
 set -e  # Exit immediately if a command fails
-
+print_line
 echo -e "🚀 Setting up NERDTree for Vim..."
 
 echo -e "${BLUE}📁 Creating plugin directory...${RESET}"
@@ -30,3 +34,4 @@ echo "autocmd VimEnter * NERDTree" >> ~/.vimrc
 
 echo -e "✅ Installation complete!"
 echo -e "${GREEN}💡 Run 'vim' to test if NERDTree opens automatically.${RESET}"
+print_line
