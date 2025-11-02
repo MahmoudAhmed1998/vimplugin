@@ -35,3 +35,24 @@ echo "autocmd VimEnter * NERDTree" >> ~/.vimrc
 echo -e "✅ Installation complete!"
 echo -e "${GREEN}💡 Run 'vim' to test if NERDTree opens automatically.${RESET}"
 print_line
+echo 
+echo -e "🚀 Setting up gruvbox for Vim..."
+
+echo -e "${CYAN}📂 Changing to plugin directory...${RESET}"
+cd ~/.vim/pack/plugins/start
+
+echo -e "${GREEN} 🌳 Cloning gruvbox plugin (this may take a few seconds)... ${RESET}"
+git clone  https://github.com/morhetz/gruvbox.git
+
+
+echo -e "${YELLOW} ⚙️  Configuring Vim to start gruvbox automatically...${RESET}"
+
+cat << EOF >> ~/.vimrc
+syntax enable
+set background=dark
+let g:gruvbox_contrast_dark='hard'
+colorscheme gruvbox 
+EOF
+
+echo -e "✅ Installation complete!"
+print_line
