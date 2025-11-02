@@ -49,6 +49,7 @@ echo -e "${YELLOW} ⚙️  Configuring Vim to start gruvbox automatically...${RE
 
 cat << EOF >> ~/.vimrc
 syntax enable
+set termguicolors
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox 
