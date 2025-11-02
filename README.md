@@ -7,7 +7,4 @@ A simple and lightweight shell script to help you install and manage Vim plugins
 To install, clone the repository and run the setup script:
 
 ```bash
-git clone https://github.com/MahmoudAhmed1998/vimplugin.git
-cd "$(basename $_ .git)"
-chmod +x vim-plugin.sh
-./vim-plugin.sh
+curl -sSfL https://raw.githubusercontent.com/MahmoudAhmed1998/vimplugin/main/vim-plugin.sh  | sh 
